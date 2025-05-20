@@ -1,0 +1,512 @@
+body {
+    background: #e2e2e2;
+  }
+  
+  .navbar {
+    background-color:  #007bff;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  
+  .navbar span {
+    /* margin-right: 50px; */
+    color: white;
+  }
+  
+  .text-white{
+    font-size: 1rem;
+    padding: 5px 2px;
+  }
+  
+  .ml-auto{
+    display: flex;
+  }
+  
+  .side-nav {
+    background-color: #343a40;
+    height: 100vh;
+    padding-top: 100px;
+    position: fixed;
+    width: 250px;
+    overflow-y: auto;
+    top: 5%;
+    /* z-index: 1; */
+  }
+  
+  .side-nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-bottom: 1px solid #575757;
+  }
+  
+  .side-nav a:hover {
+    background-color: #575757;
+  }
+  
+  .side-nav .dropdown-btn {
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #575757;
+  }
+  
+  .side-nav .dropdown-btn:hover {
+    background-color: #575757;
+  }
+  
+  .side-nav .dropdown-container {
+    display: none;
+    background-color: #414141;
+    padding-left: 15px;
+  }
+  
+  .side-nav .active {
+    display: block;
+  }
+  
+  /* .dropdown-btn::after {
+    content: '\25BC'; /* Down arrow *
+    float: right;
+  }
+  
+  .dropdown-btn.collapsed::after {
+    content: '\25B6'; /* Right arrow *
+  } */
+  
+  /* Adjustments for main content */
+  .main-content {
+    /* margin-left: 270px; Adjusted to avoid overlap with the sidebar */
+    /* padding: 20px; */
+    /* margin-right: 20px; */
+    padding-top: 80px; /* Extra padding for the navbar */
+    overflow: hidden;
+  }
+  
+  .main-content h1 {
+    /* margin: 20px; */
+  }
+  
+  /* form  add_hall*/
+  
+  input[type=text],input[type=email],input[type=number], select, textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 6px; 
+    resize: vertical;
+  }
+  
+  .btnlogin-popup{
+      color: white;
+      padding: 10px 20px 10px 20px ;
+      width: 220px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-left: 10px;
+      transition: .5s;
+      text-decoration: none;
+  }
+  .btnlogin-popup:hover{
+      background: #77975b;
+      color: #162938;
+  } 
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  /* For Firefox */
+  input[type="number"] {
+      -moz-appearance: textfield;
+  }
+  
+  input[type=submit] {
+    background-color: #5161ce;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #808184;
+  }
+  
+  .form-label{
+      font-weight: 600;
+      font-size: 17px;
+  }
+  
+  /* Add View halltype */
+  
+  a{
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 5px 20px;
+    /* margin-left: 40px; */
+    text-decoration:none
+    
+  
+  }
+  a::after{
+    
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform:scaleX(0);
+    transition: transform .5s;
+    color: #162938;
+    text-decoration: none;
+  }
+  
+  .avail{
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .hall-details{
+    text-align: center;
+    
+  }
+  
+  /* shovi */
+  
+  /* Responsive for smaller screens */
+  @media screen and (max-width: 768px) {
+    .side-nav {
+        width: 100%;
+        height: auto;
+        /* position: fixed; */
+    }
+    .side-nav a {
+        float: left;
+        padding: 15px;
+    }
+    .main-content {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+  }
+  
+  #message, #av_board{
+      display: none;
+  }
+   #auditoriumForm, #complexForm, #conferenceForm {
+              display: none;
+          }
+          .form-section-title {
+          color: #007bff;
+          border-bottom: 2px solid #007bff;
+          padding-bottom: 5px;
+          margin-bottom: 15px;
+      }
+      .btn-check:checked + .btn-outline-primary {
+          color: #ffffff;
+          background-color: #007bff;
+          border-color: #007bff;
+      }
+      .card {
+          border: none;
+          border-radius: 15px;
+      }
+      .card-body {
+          padding: 2rem;
+      }
+      .form-label {
+          font-weight: 600;
+      }
+      .btn-group {
+          width: 100%;
+      }
+      .btn-group .btn {
+          flex: 1;
+      }
+      body {
+          padding-top: 70px; /* Adjust this value based on the height of your navbar */
+      }
+      .navbar {
+          box-shadow: 0 2px 4px rgba(0,0,0,.1);
+      }
+      .navbar-brand img {
+          max-height: 40px;
+      }
+      .navbar-nav .nav-link {
+          padding: 0.5rem 1rem;
+      }
+      @media (max-width: 991.98px) {
+          .navbar-nav {
+              flex-direction: row;
+          }
+          .navbar-nav .nav-item {
+              padding-right: 0.5rem;
+          }
+      }
+      .btn.btn-success {
+      background-color: #28a745; /* Change this to your desired background color */
+      color: #ffffff; /* Change this to your desired text color */
+  }
+  
+  .btn.btn-success:hover {
+      background-color: #218838; /* Darker shade for hover effect */
+      color: #ffffff; /* Keep text color white on hover */
+  }
+  
+  .btn.btn-success:focus, .btn.btn-success:active {
+      background-color: #1e7e34; /* Even darker shade for focus and active states */
+      color: #ffffff; /* Keep text color white on focus/active */
+  }
+  
+  /* view_modify_hall filter */
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Adjust the spacing between items */
+}
+
+.feature-item {
+  flex: 0 1 32%;
+  /* Flex-grow, flex-shrink, and flex-basis */
+  display: flex;
+  align-items: center;
+}
+
+.form-check {
+  margin-bottom: 0;
+}
+  
+
+/* Sidebar colaps */
+#main {
+  margin-left: 250px;
+transition: margin-left .5s;
+padding: 16px;
+/* padding-top: 50px; */
+}
+  
+  /* add_school_dept css */
+  
+/* view_modify_hall page */
+   /* icon button  */
+   .icon-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.icon-button i {
+    font-size: 16px;
+}
+
+/* Red Button */
+.red-button {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.red-button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+.redd-button {
+  color: #626262;
+  border-color: #575757;
+}
+/* Yellow Button */
+.yellow-button {
+    color: orange;
+    border-color: orange;
+}
+
+.yellow-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* Blue Button */
+.blue-button {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.blue-button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.gray-button {
+  color: #4e4e4e;
+  border-color: #4e4e4e;
+}
+
+.gray-button:hover {
+  background-color: #4e4e4e;
+  color: white;
+}
+
+
+
+/* Green Button */
+.green-button {
+    color: green;
+    border-color: green;
+}
+
+.green-button:hover {
+    background-color: green;
+    color: white;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.popup-content select,
+.popup-content button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+}
+
+/* Popup container styling */
+#ownershipTransferPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 350px;
+    text-align: center;
+}
+
+/* Form title */
+#ownershipTransferPopup h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #333;
+}
+
+/* Form labels */
+#ownershipTransferPopup label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+/* Dropdown styling */
+#ownershipTransferPopup select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #f9f9f9;
+}
+
+/* Buttons styling */
+#ownershipTransferPopup button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Confirm button */
+#ownershipTransferPopup button:first-of-type {
+    background: #0075ff;
+    color: white;
+}
+
+/* Cancel button */
+#ownershipTransferPopup button:last-of-type {
+    background: #dc3545;
+    color: white;
+}
+
+/* Button hover effect */
+#ownershipTransferPopup button:hover {
+    opacity: 0.85;
+}
+
+/* all table th td width  */
+
+#bookingTable th,
+        #bookingTable td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        #bookingTable th {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        .table-container {
+            max-height: 500px;
+            overflow-y: auto;
+        }
